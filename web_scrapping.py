@@ -241,7 +241,7 @@ class ApiWot:
         #the 
         thirdParty='http://api.mywot.com/0.4/public_link_json2?hosts='
         #the key used to webscrap
-        key='/&callback=process&key=6840647a713d3e6e2d10f54345db300a7232c80f'
+        key='/&callback=process&key=.....'
         #adding the url to the object
         self.url=url
         #Loading the reulst of MyWot Api in a json format        
