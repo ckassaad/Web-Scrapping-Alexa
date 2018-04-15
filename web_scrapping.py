@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Éditeur de Spyder
 Titre: Web Scrapping
 Auteur: Karim ASSAAD
 Date: 17/04/2017
@@ -356,23 +355,3 @@ def get_data_web(vect,t_s=10,w_s=100):
 ######################################################################
 #end of function
 ######################################################################
-
-
-
-###fonction to retreive json file
-def get_ranks(url):
-    #url="http://data.alexa.com/data?cli=10&dat=s&url="+ urllib.urlencode({'sensor':'false', 'address': url})
-    url="http://data.alexa.com/data?cli=10&dat=s&url="+  url
-    #html=urllib.urlopen(url).read()
-#            soup = BeautifulSoup(html, "xml")
-#            soup.find("REACH")['RANK']
-    try: js=json.loads(str(url))
-    except: js=None
-    if 'status' not in js or js['status']!='OK':
-        print '#####Failure#####'
-#        print  html
-#        continue
-    print json.dumps(js, indent=4)
-    rank = js["rank"][0]["sds"]["dsds"]
-    rankF = js["rankF"]
-    return rank, rankF
